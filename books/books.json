@@ -1,0 +1,185 @@
+[
+  {
+    "id": 1,
+    "name": "To Kill a Mockingbird",
+    "title": "To Kill a Mockingbird",
+    "pageCount": 281,
+    "isbn": "9780061120084",
+    "thumbnailUrl": "https://images-na.ssl-images-amazon.com/images/I/81gepf1eMqL.jpg",
+    "shortDescription": "A novel about the serious issues of rape and racial inequality.",
+    "longDescription": "Published in 1960, it was immediately successful, winning the Pulitzer Prize, and has become a classic of modern American literature. The plot and characters are loosely based on the author's observations of her family, her neighbors and an event that occurred near her hometown when she was 10 years old.",
+    "authors": [
+      "Harper Lee"
+    ],
+    "tags": [
+      "Classics",
+      "Fiction",
+      "Historical"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "1984",
+    "title": "1984",
+    "pageCount": 328,
+    "isbn": "9780451524935",
+    "thumbnailUrl": "https://images-na.ssl-images-amazon.com/images/I/81gepf1eMqL.jpg",
+    "shortDescription": "A dystopian novel set in a totalitarian society ruled by Big Brother.",
+    "longDescription": "Published in 1949, the novel is set in a dystopian society that is under the constant surveillance of the totalitarian regime of Big Brother. The novel has been influential in popular culture and has introduced terms such as 'Big Brother', 'doublethink', and 'thoughtcrime'.",
+    "authors": [
+      "George Orwell"
+    ],
+    "tags": [
+      "Classics",
+      "Fiction",
+      "Dystopian"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "The Great Gatsby",
+    "title": "The Great Gatsby",
+    "pageCount": 180,
+    "isbn": "9780743273565",
+    "thumbnailUrl": "https://images-na.ssl-images-amazon.com/images/I/81gepf1eMqL.jpg",
+    "shortDescription": "A novel about the American dream and the roaring twenties.",
+    "longDescription": "Published in 1925, the novel is set in the Jazz Age on Long Island, near New York City, and is a critique of the American Dream. The story is about the mysterious millionaire Jay Gatsby and his obsession with the beautiful Daisy Buchanan.",
+    "authors": [
+      "F. Scott Fitzgerald"
+    ],
+    "tags": [
+      "Classics",
+      "Fiction",
+      "Historical"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Moby Dick",
+    "title": "Moby Dick",
+    "pageCount": 585,
+    "isbn": "9781503280786",
+    "thumbnailUrl": "https://images-na.ssl-images-amazon.com/images/I/81gepf1eMqL.jpg",
+    "shortDescription": "A novel about the voyage of the whaling ship Pequod.",
+    "longDescription": "Published in 1851, the novel is narrated by Ishmael and follows the adventures of the crew of the whaling ship Pequod, led by Captain Ahab, who is obsessed with hunting the giant white whale, Moby Dick.",
+    "authors": [
+      "Herman Melville"
+    ],
+    "tags": [
+      "Classics",
+      "Fiction",
+      "Adventure"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Pride and Prejudice",
+    "title": "Pride and Prejudice",
+    "pageCount": 279,
+    "isbn": "9781503290563",
+    "thumbnailUrl": "https://images-na.ssl-images-amazon.com/images/I/71UypkUjStL.jpg",
+    "shortDescription": "A romantic novel about manners and matrimonial machinations.",
+    "longDescription": "Published in 1813, the novel follows the character development of Elizabeth Bennet, the dynamic protagonist of the book who learns about the repercussions of hasty judgments and comes to appreciate the difference between superficial goodness and actual goodness.",
+    "authors": [
+      "Jane Austen"
+    ],
+    "tags": [
+      "Classics",
+      "Fiction",
+      "Romance"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "The Catcher in the Rye",
+    "title": "The Catcher in the Rye",
+    "pageCount": 214,
+    "isbn": "9780316769488",
+    "thumbnailUrl": "https://images-na.ssl-images-amazon.com/images/I/81OthjkJBuL.jpg",
+    "shortDescription": "A novel about teenage rebellion and angst.",
+    "longDescription": "Published in 1951, the novel is a story about a few days in the life of a 16-year-old boy named Holden Caulfield, who has just been expelled from his fourth school. The novel explores complex issues of identity, belonging, connection, and alienation.",
+    "authors": [
+      "J.D. Salinger"
+    ],
+    "tags": [
+      "Classics",
+      "Fiction",
+      "Coming of Age"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "The Hobbit",
+    "title": "The Hobbit",
+    "pageCount": 310,
+    "isbn": "9780547928227",
+    "thumbnailUrl": "https://images-na.ssl-images-amazon.com/images/I/91b0C2YNSrL.jpg",
+    "shortDescription": "A fantasy novel about the journey of Bilbo Baggins.",
+    "longDescription": "Published in 1937, the novel is a prelude to the Lord of the Rings series and follows the journey of the hobbit Bilbo Baggins, who sets out on a quest to win a share of the treasure guarded by the dragon, Smaug.",
+    "authors": [
+      "J.R.R. Tolkien",
+      "J.R.R. Tolkien",
+      "J.R.R. Tolkien"
+    ],
+    "tags": [
+      "Classics",
+      "Fiction",
+      "Fantasy"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "War and Peace",
+    "title": "War and Peace",
+    "pageCount": 1225,
+    "isbn": "9780199232765",
+    "thumbnailUrl": "https://images-na.ssl-images-amazon.com/images/I/81gepf1eMqL.jpg",
+    "shortDescription": "A historical novel that chronicles the French invasion of Russia.",
+    "longDescription": "Published in 1869, the novel is regarded as one of Tolstoy's finest works and is a complex tale that intertwines the lives of several families as they navigate the tumultuous times of the Napoleonic wars in Russia.",
+    "authors": [
+      "Leo Tolstoy",
+      "Leo Tolstoy"
+    ],
+    "tags": [
+      "Classics",
+      "Fiction",
+      "Historical"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "The Lord of the Rings",
+    "title": "The Lord of the Rings",
+    "pageCount": 1178,
+    "isbn": "9780618640157",
+    "thumbnailUrl": "https://images-na.ssl-images-amazon.com/images/I/91b0C2YNSrL.jpg",
+    "shortDescription": "A high-fantasy epic novel.",
+    "longDescription": "Published in 1954, the novel is a sequel to The Hobbit and follows the quest of Frodo Baggins and his companions to destroy the One Ring and ensure the downfall of its maker, the Dark Lord Sauron.",
+    "authors": [
+      "J.R.R. Tolkien"
+    ],
+    "tags": [
+      "Classics",
+      "Fiction",
+      "Fantasy"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Jane Eyre",
+    "title": "Jane Eyre",
+    "pageCount": 500,
+    "isbn": "9780141441146",
+    "thumbnailUrl": "https://images-na.ssl-images-amazon.com/images/I/81WojUxbbFL.jpg",
+    "shortDescription": "A novel about the experiences of its eponymous heroine.",
+    "longDescription": "Published in 1847, the novel follows the experiences of Jane Eyre, including her growth to adulthood and her love for Mr. Rochester, the brooding master of Thornfield Hall. The novel revolutionized the art of fiction and introduced themes of class, sexuality, religion, and feminism.",
+    "authors": [
+      "Charlotte Brontë"
+    ],
+    "tags": [
+      "Classics",
+      "Fiction",
+      "Romance"
+    ]
+  }
+]
