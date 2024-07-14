@@ -1,14 +1,22 @@
-from django.shortcuts import render
-from books.models import Book
-# from django.http import HttpResponse
+from django.shortcuts import render,get_object_or_404,redirect
+from books.models import Book,Review
+from django.http import Http404
 
 def index(request):
     data=Book.objects.all()
     context={'data':data}
     return render(request,'books/index.html',context)
-    # return HttpResponse('Book app')
     
 def show(request,id):
-    book=Book.objects.filter(id=id).first()
-    context={'book':book}
+    book=get_object_or_404(Book,pk=id)
+    reviews=Review.objects.filter(book_id=id).order_by('-created_at')
+    context={'book':book,'reviews':reviews}
     return render(request,'books/single-book.html',context)
+
+def review(request):
+    id=request.POST['id']
+    review=request.POST['review']
+    
+    record=Review(body=review,book_id=id)
+    record.save()
+    return redirect('/books')

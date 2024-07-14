@@ -13,15 +13,15 @@
 
     <div class="grid grid-cols-4 gap-4">
         {% for book in data %}
-        <a href="{% url 'book.show' book.id %}" class="justify-self-center text-center my-4" target="_blank">
-            <div>
-                <h3>
-                    {{book.title}}
-                </h3>
-                <img src="{{book.thumbnailUrl}}" width="150px">
-            </div>
-        </a>
-            {% endfor %}
+            <a href="{% url 'book.show' book.id %}" class="justify-self-center text-center my-4" target="_blank">
+                <div>
+                    <h3>
+                        {{book.title}}
+                    </h3>
+                    <img src="{{book.thumbnailUrl}}" width="150px">
+                </div>
+            </a>
+        {% endfor %}
     </div>
     
 </body>
