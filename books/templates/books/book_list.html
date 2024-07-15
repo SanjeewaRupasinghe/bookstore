@@ -12,7 +12,7 @@
     </h1>
 
     <div class="grid grid-cols-4 gap-4">
-        {% for book in data %}
+        {% for book in book_list %}
             <a href="{% url 'book.show' book.id %}" class="justify-self-center text-center my-4" target="_blank">
                 <div>
                     <h3>
