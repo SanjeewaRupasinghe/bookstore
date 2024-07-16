@@ -25,7 +25,9 @@
                         Author
                     </h3>
                     {% for author in authors %}
+                    <a href="{% url 'author.books' author %}">
                         {{author}}, 
+                    </a>
                     {% endfor %}
                 </div>
     
