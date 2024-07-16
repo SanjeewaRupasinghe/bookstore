@@ -1,5 +1,11 @@
 from django.db import models
 
+class Author(models.Model):
+    name=models.CharField(max_length=256)
+    
+    def __str__(self):
+        return self.name
+
 class Book(models.Model):
     title=models.CharField(max_length=256)
     pageCount=models.IntegerField(default=0)
@@ -7,7 +13,7 @@ class Book(models.Model):
     shortDescription=models.CharField(max_length=256,null=True)
     longDescription=models.TextField(null=True)
     longDescription=models.TextField(null=True)
-    authors=models.CharField(max_length=256,null=True)
+    authors=models.ManyToManyField(Author)
     isbn=models.CharField(max_length=256,null=True)
     
     def __str__(self):

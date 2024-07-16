@@ -19,6 +19,7 @@ class BookDetailsView(DetailView):
     def get_context_data(self, **kwargs):
         context= super().get_context_data(**kwargs)
         context['review']=context['book'].review_set.order_by('-created_at')
+        context['authors']=context['book'].authors.all()
         return context
 
 # def show(request,id):

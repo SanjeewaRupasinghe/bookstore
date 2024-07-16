@@ -24,7 +24,9 @@
                     <h3 class="text-2xl m-3 ms-0">
                         Author
                     </h3>
-                    {{book.authors}}
+                    {% for author in authors %}
+                        {{author}}, 
+                    {% endfor %}
                 </div>
     
                 <div class="mt-2">
