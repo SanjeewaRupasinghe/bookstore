@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>django</title>
-</head>
-<body>
+{% extends "books/base.html" %}
+
+{% block title %}
+    <title>{{book.title}}</title>
+    {% endblock %}
+
+{% block content %}
     <h1 class="text-center text-4xl">
         {{book.title}}
     </h1>
@@ -64,6 +62,5 @@
 
 
     </div>
+{% endblock %}
     
-</body>
-</html>
