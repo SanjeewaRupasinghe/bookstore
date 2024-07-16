@@ -15,5 +15,5 @@ class Book(models.Model):
 
 class Review(models.Model):
     body=models.TextField(max_length=256)
-    book_id=models.IntegerField()
+    book=models.ForeignKey(Book,on_delete=models.CASCADE,null=True)
     created_at=models.DateTimeField(auto_now=True)

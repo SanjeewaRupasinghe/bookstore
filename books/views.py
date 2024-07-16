@@ -2,7 +2,6 @@ from typing import Any
 from django.db.models.query import QuerySet
 from django.shortcuts import render,get_object_or_404,redirect
 from books.models import Book,Review
-from django.http import Http404
 from django.views.generic import ListView,DetailView
 
 class BookListView(ListView):
@@ -17,11 +16,16 @@ class BookListView(ListView):
 class BookDetailsView(DetailView):
     model=Book
     
-def show(request,id):
-    book=get_object_or_404(Book,pk=id)
-    reviews=Review.objects.filter(book_id=id).order_by('-created_at')
-    context={'book':book,'reviews':reviews}
-    return render(request,'books/single-book.html',context)
+    def get_context_data(self, **kwargs):
+        context= super().get_context_data(**kwargs)
+        context['review']=context['book'].review_set.order_by('-created_at')
+        return context
+
+# def show(request,id):
+#     book=get_object_or_404(Book,pk=id)
+#     reviews=Review.objects.filter(book_id=id).order_by('-created_at')
+#     context={'book':book,'reviews':reviews}
+#     return render(request,'books/single-book.html',context)
 
 def review(request):
     id=request.POST['id']
