@@ -120,6 +120,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 LOGIN_REDIRECT_URL="/books"
 LOGIN_URL="/login"
+LOGOUT_REDIRECT_URL="/login"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

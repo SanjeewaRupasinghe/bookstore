@@ -6,6 +6,16 @@
     {% endblock %}
 
 {% block content %}
+
+{% if user.is_authenticated %}
+<form method="post" action="/logout/">
+    {% csrf_token %}
+    <button type="submit">Log out</button>
+</form>
+    <!-- <div>
+        <a href="/logout">logout</a>
+    </div> -->
+{% endif %}
     <h1 class="text-center text-4xl">
         Books
     </h1>
