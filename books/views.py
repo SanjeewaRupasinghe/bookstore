@@ -1,10 +1,11 @@
 from typing import Any
 from django.db.models.query import QuerySet
-from django.shortcuts import render,get_object_or_404,redirect
+from django.shortcuts import render,redirect
 from books.models import Book,Review
 from django.views.generic import ListView,DetailView
+from django.contrib.auth.mixins import LoginRequiredMixin
 
-class BookListView(ListView):
+class BookListView(LoginRequiredMixin,ListView):
     def get_queryset(self):
         return Book.objects.all()
 
@@ -13,7 +14,7 @@ class BookListView(ListView):
 #     context={'data':data}
 #     return render(request,'books/index.html',context)
     
-class BookDetailsView(DetailView):
+class BookDetailsView(LoginRequiredMixin,DetailView):
     model=Book
     
     def get_context_data(self, **kwargs):
