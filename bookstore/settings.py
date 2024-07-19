@@ -122,6 +122,16 @@ LOGIN_REDIRECT_URL="/books"
 LOGIN_URL="/login"
 LOGOUT_REDIRECT_URL="/login"
 
+EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+EMAIL_HOST_USER = '4e986498b61c15'
+EMAIL_HOST_PASSWORD = '1d9dd7c90dfa5d'
+EMAIL_PORT = '2525'
+
+# EMAIL_HOST = 'mail.angeloremedios.com'
+# EMAIL_HOST_USER = 'tech@angeloremedios.com'
+# EMAIL_HOST_PASSWORD = 'Sanjeewa@123$'
+# EMAIL_PORT = '587'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
