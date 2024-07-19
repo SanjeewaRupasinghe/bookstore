@@ -30,11 +30,12 @@ class BookDetailsView(LoginRequiredMixin,DetailView):
 #     return render(request,'books/single-book.html',context)
 
 def review(request):
-    id=request.POST['id']
-    review=request.POST['review']
-    
-    record=Review(body=review,book_id=id)
-    record.save()
+    if request.user.is_authenticated:
+        id=request.POST['id']
+        review=request.POST['review']
+        
+        record=Review(body=review,book_id=id,user=request.user)
+        record.save()
     return redirect('/books')
 
 def author(request,author):

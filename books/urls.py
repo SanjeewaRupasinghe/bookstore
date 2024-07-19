@@ -6,5 +6,5 @@ urlpatterns=[
     path('<int:pk>',views.BookDetailsView.as_view(),name='book.show'),
     path('<str:author>',views.author,name='author.books'),
     
-    path('review',views.review,name='review.add')
+    path('review/add',views.review,name='review.add')
 ]
