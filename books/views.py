@@ -4,6 +4,7 @@ from django.shortcuts import render,redirect
 from books.models import Book,Review
 from django.views.generic import ListView,DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.core.files.storage import FileSystemStorage
 
 class BookListView(LoginRequiredMixin,ListView):
     def get_queryset(self):
@@ -31,10 +32,14 @@ class BookDetailsView(LoginRequiredMixin,DetailView):
 
 def review(request):
     if request.user.is_authenticated:
+        image=request.FILES['image']
+        fs=FileSystemStorage()
+        name=fs.save(image.name,image)
+        
         id=request.POST['id']
         review=request.POST['review']
         
-        record=Review(body=review,book_id=id,user=request.user)
+        record=Review(body=review,book_id=id,user=request.user,image=fs.url(name))
         record.save()
     return redirect('/books')
 

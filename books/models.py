@@ -10,7 +10,6 @@ class Author(models.Model):
 class Book(models.Model):
     title=models.CharField(max_length=256)
     pageCount=models.IntegerField(default=0)
-    thumbnailUrl=models.CharField(max_length=256,null=True)
     shortDescription=models.CharField(max_length=256,null=True)
     longDescription=models.TextField(null=True)
     photo=models.ImageField(upload_to="images",null=True)
@@ -24,4 +23,5 @@ class Review(models.Model):
     body=models.TextField(max_length=256)
     book=models.ForeignKey(Book,on_delete=models.CASCADE,null=True)
     user=models.ForeignKey(User,on_delete=models.CASCADE,null=True)
+    image=models.ImageField(upload_to="images/review",null=True)
     created_at=models.DateTimeField(auto_now=True)
