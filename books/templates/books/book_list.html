@@ -27,7 +27,9 @@
                     <h3>
                         {{book.title}}
                     </h3>
-                    <img src="{{book.thumbnailUrl}}" width="150px">
+                    {% if book.photo %}
+                    <img src="{{book.photo.url}}" width="150px">
+                    {% endif %}
                 </div>
             </a>
         {% endfor %}

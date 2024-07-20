@@ -13,7 +13,7 @@ class Book(models.Model):
     thumbnailUrl=models.CharField(max_length=256,null=True)
     shortDescription=models.CharField(max_length=256,null=True)
     longDescription=models.TextField(null=True)
-    longDescription=models.TextField(null=True)
+    photo=models.ImageField(upload_to="images",null=True)
     authors=models.ManyToManyField(Author)
     isbn=models.CharField(max_length=256,null=True)
     

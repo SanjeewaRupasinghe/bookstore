@@ -10,7 +10,9 @@
     </h1>
     <div class="flex justify-between">
         <div class="w-3/12 p-4">
-            <img src="{{book.thumbnailUrl}}" width="150px">
+            {% if book.photo %}
+                    <img src="{{book.photo.url}}" width="150px">
+                    {% endif %}
         </div>
         <div class="w-9/12 p-4">
             <div>
