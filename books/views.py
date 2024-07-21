@@ -5,6 +5,7 @@ from books.models import Book,Review
 from django.views.generic import ListView,DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.files.storage import FileSystemStorage
+from books.forms import ReviewForm
 
 class BookListView(LoginRequiredMixin,ListView):
     def get_queryset(self):
@@ -22,6 +23,7 @@ class BookDetailsView(LoginRequiredMixin,DetailView):
         context= super().get_context_data(**kwargs)
         context['review']=context['book'].review_set.order_by('-created_at')
         context['authors']=context['book'].authors.all()
+        context['form']=ReviewForm
         return context
 
 # def show(request,id):
@@ -32,14 +34,16 @@ class BookDetailsView(LoginRequiredMixin,DetailView):
 
 def review(request):
     if request.user.is_authenticated:
-        image=request.FILES['image']
-        fs=FileSystemStorage()
-        name=fs.save(image.name,image)
-        
         id=request.POST['id']
-        review=request.POST['review']
+        review=request.POST['body']
+        record=Review(body=review,book_id=id,user=request.user)
         
-        record=Review(body=review,book_id=id,user=request.user,image=fs.url(name))
+        if len(request.FILES) !=0:
+            image=request.FILES['image']
+            fs=FileSystemStorage()
+            name=fs.save(image.name,image)
+            record.image=fs.url(name)
+        
         record.save()
     return redirect('/books')
 
