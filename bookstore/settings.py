@@ -118,16 +118,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
-LOGIN_REDIRECT_URL="/books"
-LOGIN_URL="/login"
-LOGOUT_REDIRECT_URL="/login"
+LOGIN_REDIRECT_URL="/"
+LOGIN_URL="auth/login"
+LOGOUT_REDIRECT_URL="login"
 
 EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
 EMAIL_HOST_USER = '4e986498b61c15'
 EMAIL_HOST_PASSWORD = '1d9dd7c90dfa5d'
 EMAIL_PORT = '2525'
 
-MEDIA_ROOT="media"
+MEDIA_ROOT="media"  
 MEDIA_URL="media/"  
 
 # Default primary key field type

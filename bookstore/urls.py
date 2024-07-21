@@ -5,8 +5,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('books/',include('books.urls')),
+    path('',include('books.urls')),
     path('admin/', admin.site.urls),
-    path('login/', auth_view.LoginView.as_view(redirect_authenticated_user=True)),
-    path('', include('django.contrib.auth.urls')),
+    path('', auth_view.LoginView.as_view(redirect_authenticated_user=True)),
+    path('auth/', include('django.contrib.auth.urls')),
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

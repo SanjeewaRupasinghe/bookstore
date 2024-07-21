@@ -2,36 +2,32 @@
 {% extends "base.html" %}
 
 {% block title %}
-    <title>Books</title>
+        Books
+    {% endblock %}
+
+    {% block heading %}
+    Books
     {% endblock %}
 
 {% block content %}
 
-{% if user.is_authenticated %}
-<form method="post" action="/logout/">
-    {% csrf_token %}
-    <button type="submit">Log out</button>
-</form>
-    <!-- <div>
-        <a href="/logout">logout</a>
-    </div> -->
-{% endif %}
-    <h1 class="text-center text-4xl">
-        Books
-    </h1>
 
-    <div class="grid grid-cols-4 gap-4">
+    <div class="flex">
         {% for book in book_list %}
-            <a href="{% url 'book.show' book.id %}" class="justify-self-center text-center my-4" target="_blank">
-                <div>
-                    <h3>
-                        {{book.title}}
-                    </h3>
+        <div class="text-center my-4 p-3 border w-1/4 m-4 rounded-xl bg-slate-400 bg-opacity-20 hover:shadow-2xl hover:bg-slate-300">
+            <a href="{% url 'book.show' book.id %}" class="justify-self-center" target="_blank">
+                <div class="mx-auto">
+                    <div class="bg-gray-400 bg-opacity-30 text-xl mb-3 rounded-xl py-2">
+                        <h3>
+                            {{book.title}}
+                        </h3>
+                    </div>
                     {% if book.photo %}
-                    <img src="{{book.photo.url}}" width="150px">
+                    <img src="{{book.photo.url}}" width="150px" class="mx-auto">
                     {% endif %}
                 </div>
             </a>
+        </div>
         {% endfor %}
     </div>
 {% endblock %}

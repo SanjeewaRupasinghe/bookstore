@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 
 {% block title %}
-    <title>{{book.title}}</title>
+        {{book.title}}
+    {% endblock %}
+
+    {% block heading %}
+    {{book.title}}
     {% endblock %}
 
 {% block content %}
-    <h1 class="text-center text-4xl">
-        {{book.title}}
-    </h1>
+    
     <div class="flex justify-between">
         <div class="w-3/12 p-4">
             {% if book.photo %}
