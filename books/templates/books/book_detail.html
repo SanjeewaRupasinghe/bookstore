@@ -69,7 +69,9 @@
                             <p>{{review.created_at}}</p>
                         </div>
                         {{review.body}}
-                        <img src="{{review.image}}" width="100px">
+                        {% if review.image %}
+                        <img src="{{review.image.url}}" width="100px">
+                        {% endif %}
                     </div>
                     {% endfor %}
                 </div>

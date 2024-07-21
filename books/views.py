@@ -35,17 +35,13 @@ class BookDetailsView(LoginRequiredMixin,DetailView):
 def review(request):
     if request.user.is_authenticated:
         id=request.POST['id']
-        review=request.POST['body']
-        record=Review(body=review,book_id=id,user=request.user)
+        record=Review(book_id=id,user=request.user)
         
-        if len(request.FILES) !=0:
-            image=request.FILES['image']
-            fs=FileSystemStorage()
-            name=fs.save(image.name,image)
-            record.image=fs.url(name)
-        
-        record.save()
-    return redirect('/books')
+        form=ReviewForm(request.POST,request.FILES,instance=record)
+        if form.is_valid():
+            form.save()
+            
+    return redirect(f"/books/{id}")
 
 def author(request,author):
     books=Book.objects.filter(authors__name=author)
