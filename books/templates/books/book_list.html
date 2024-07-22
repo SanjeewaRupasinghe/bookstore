@@ -12,12 +12,12 @@
 {% block content %}
 
 
-    <div class="flex">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mt-5">
         {% for book in book_list %}
-        <div class="text-center my-4 p-3 border w-1/4 m-4 rounded-xl bg-slate-400 bg-opacity-20 hover:shadow-2xl hover:bg-slate-300">
+        <div class="text-center pb-5 border rounded-xl backdrop-blur-sm bg-white/30 hover:shadow-2xl hover:backdrop-blur-3xl">
             <a href="{% url 'book.show' book.id %}" class="justify-self-center" target="_blank">
                 <div class="mx-auto">
-                    <div class="bg-gray-400 bg-opacity-30 text-xl mb-3 rounded-xl py-2">
+                    <div class="bg-gray-400 bg-opacity-50 text-xl mb-3 rounded-xl py-2">
                         <h3>
                             {{book.title}}
                         </h3>
