@@ -106,7 +106,7 @@ EMAIL_HOST_PASSWORD = '1d9dd7c90dfa5d'
 EMAIL_PORT = '2525'
 
 MEDIA_ROOT="media"  
-MEDIA_URL="media/"  
+MEDIA_URL=os.path.join(BASE_DIR, 'media/') 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
