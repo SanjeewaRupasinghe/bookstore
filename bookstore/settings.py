@@ -123,11 +123,11 @@ DATABASES = {
     }
 }
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
 
 # # HOST ==============
-# databaseUrl=os.environ.get('DJANGO_DATABASE_URL')
-# DATABASES['default']=dj_database_url.parse(databaseUrl)
+databaseUrl=os.environ.get('DJANGO_DATABASE_URL')
+DATABASES['default']=dj_database_url.parse(databaseUrl)
 
-# ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS').split(" ")
+ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS').split(" ")
 
