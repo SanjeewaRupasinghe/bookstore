@@ -114,7 +114,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # # ENV VARIABLES ==============
 
-# # LOCAL
+# # LOCAL ==============
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
@@ -124,7 +124,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # ALLOWED_HOSTS = []
 
-# # HOST
+# # HOST ==============
 databaseUrl=os.environ.get('DJANGO_DATABASE_URL')
 DATABASES['default']=dj_database_url.parse(databaseUrl)
 
