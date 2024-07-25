@@ -13,14 +13,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # # HOST ===============
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','django-insecure-7_lcb3)dvte@g@bt^-wvtijowwx@iabpg7=is)4w3(tawwetzk')
 
-DEBUG = True
+# DEBUG = True
 # # HOST ===============
-# DEBUG = os.environ.get('DJANGO_DEBUG',"False").lower()=='true'
-
-ALLOWED_HOSTS = []
-# # HOST ===============
-# ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS').split(" ")
-
+DEBUG = os.environ.get('DJANGO_DEBUG',"true").lower()=='true'
 
 # Application definition
 
@@ -63,20 +58,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'bookstore.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-# # HOST ===============
-# databaseUrl=os.environ.get('DJANGO_DATABASE_URL')
-# DATABASES['default']=dj_database_url.parse(databaseUrl)
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -130,4 +111,22 @@ MEDIA_URL="media/"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# # ENV VARIABLES ==============
+
+# # LOCAL
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+# ALLOWED_HOSTS = []
+
+# # HOST
+databaseUrl=os.environ.get('DJANGO_DATABASE_URL')
+DATABASES['default']=dj_database_url.parse(databaseUrl)
+
+ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS').split(" ")
 
