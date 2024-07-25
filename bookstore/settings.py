@@ -9,14 +9,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'django-insecure-7_lcb3)dvte@g@bt^-wvtijowwx@iabpg7=is)4w3(tawwetzk'
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+# # HOST ===============
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','django-insecure-7_lcb3)dvte@g@bt^-wvtijowwx@iabpg7=is)4w3(tawwetzk')
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DJANGO_DEBUG',"False").lower()=='true'
+DEBUG = True
+# # HOST ===============
+# DEBUG = os.environ.get('DJANGO_DEBUG',"False").lower()=='true'
 
-ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS').split(" ")
+ALLOWED_HOSTS = []
+# # HOST ===============
+# ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS').split(" ")
 
 
 # Application definition
@@ -71,8 +74,9 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-databaseUrl=os.environ.get('DJANGO_DATABASE_URL')
-DATABASES['default']=dj_database_url.parse(databaseUrl)
+# # HOST ===============
+# databaseUrl=os.environ.get('DJANGO_DATABASE_URL')
+# DATABASES['default']=dj_database_url.parse(databaseUrl)
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -109,6 +113,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 LOGIN_REDIRECT_URL="/"
 LOGIN_URL="auth/login"
 LOGOUT_REDIRECT_URL="login"
