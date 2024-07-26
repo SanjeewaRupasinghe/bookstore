@@ -94,8 +94,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR/'staticfiles/'
 LOGIN_REDIRECT_URL="/"
 LOGIN_URL="auth/login"
 LOGOUT_REDIRECT_URL="login"
@@ -105,8 +105,8 @@ EMAIL_HOST_USER = '4e986498b61c15'
 EMAIL_HOST_PASSWORD = '1d9dd7c90dfa5d'
 EMAIL_PORT = '2525'
 
-MEDIA_ROOT="/media/"  
-MEDIA_URL=os.path.join(BASE_DIR, 'media/') 
+MEDIA_ROOT="media"  
+MEDIA_URL="media/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -126,8 +126,8 @@ DATABASES = {
 # ALLOWED_HOSTS = []
 
 # # HOST ==============
-# databaseUrl=os.environ.get('DJANGO_DATABASE_URL')
-# DATABASES['default']=dj_database_url.parse(databaseUrl)
+databaseUrl=os.environ.get('DJANGO_DATABASE_URL')
+DATABASES['default']=dj_database_url.parse(databaseUrl)
 
-# ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS').split(" ")
+ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS').split(" ")
 
