@@ -4,12 +4,19 @@ from django.shortcuts import render,redirect
 from books.models import Book,Review
 from django.views.generic import ListView,DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.core.files.storage import FileSystemStorage
 from books.forms import ReviewForm
 
 class BookListView(LoginRequiredMixin,ListView):
-    def get_queryset(self):
-        return Book.objects.all()
+    model = Book
+    def dispatch(self, request, *args, **kwargs):
+        if self.request.user.is_staff:
+            return redirect('/admin/login')
+        return super().dispatch(request, *args, **kwargs)
+
+    # before the changes
+    # def get_queryset(self):
+    #     return Book.objects.all()
+
 
 # def index(request):
 #     data=Book.objects.all()
